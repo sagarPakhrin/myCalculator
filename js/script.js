@@ -16,6 +16,7 @@ function clickEvent(e){
 				if(num=='C'){
 						expression.innerHTML ="";
 						hist.innerHTML ="";
+						isDecimal = false;
 				}
 				else if (num =='<'){
 						expression.innerHTML = expression.innerHTML.substring(0,expression.innerHTML.length -1);
@@ -30,8 +31,15 @@ function clickEvent(e){
 						}
 				}
 				else if(num == "="){
+						isDecimal = false;
 						hist.innerHTML =expression.innerHTML;
-						expression.innerHTML = eval(hist.innerHTML); 
+						var result = eval(hist.innerHTML); 
+						if(result % 1 == 0){
+							expression.innerHTML = eval(hist.innerHTML); 
+						}
+						else{
+							expression.innerHTML = result.toFixed(2);
+						}
 						finished = true;
 				}
 				else if(num == "+" || num == "-" || num == "*" || num == "/" ){
