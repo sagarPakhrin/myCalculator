@@ -3,5 +3,65 @@
     padding: 0;
 }
 body{
+		font-family:"Arial";
     background:#cae5e6;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		height:100vh;
+}
+.calculator{
+		background:#3a4546;
+		height:500px;
+		width:300px;
+		display:flex;
+		flex-direction:column;
+		box-shadow: 0px 30px 40px #888888;
+		overflow:hidden;
+}
+.display{
+		background:#3a4655;
+		min-height:100px;
+		width:100%;
+}
+
+.wrapper{
+		background:#374352;
+		display:grid;
+		grid-template-columns: repeat(4,1fr);
+		height:80%;
+}
+.number{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		color:#fff;
+		border-right:1px solid #3b4655;
+		border-bottom:1px solid #3f4655;
+}
+
+.number:nth-of-type(4n) {
+		border-right:none;
+}
+
+.number:hover{
+		cursor:pointer;
+}
+
+.display{
+		display:grid;
+}
+
+#hist{
+		margin-top:5px;
+		padding:20px 15px 0 0;
+		color:#646f7e;
+		text-align:right;
+}
+#expression{
+		padding:20px 15px 0 0;
+		text-align:right;
+		font-size:2rem;
+		vertical-align:middle;
+		color:#fff;
 }
