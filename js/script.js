@@ -22,12 +22,12 @@ function clickEvent(e){
 						expression.innerHTML = expression.innerHTML.substring(0,expression.innerHTML.length -1);
 				}
 				else if (num == "."){
-						if(isDecimal == true){
+						if(isDecimal){
 								expression.innerHTML =expression.innerHTML;
 						}
 						else{
-								isDecimal = true;
-								expression.innerHTML +=key.textContent;
+							isDecimal = true;
+							expression.innerHTML +=key.textContent;
 						}
 				}
 				else if(num == "="){
